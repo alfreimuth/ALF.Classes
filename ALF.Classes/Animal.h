@@ -13,18 +13,18 @@ private:
 
 public:
 
-	//getters and setters
-	std::string GetName() const { return m_name; }
-	float GetAge() const { return m_age;  }
+	// setters
+	virtual void SetName(const std::string name) { m_name = name; }
+	virtual void SetAge(const float age) { m_age = age; }
 
-	void SetName(const std::string name) { m_name = name; }
-	void SetAge(const float age) { m_age = age; }
-	
+	// getters
+	virtual std::string GetName() const { return m_name; }
+	virtual float GetAge() const { return m_age;  }
+
 	//print method
-	void Print()
+	// Virtual means that this CAN be overridden 
+	virtual void Print() const
 	{
-		std::cout << m_name << " is " << m_age << " year(s) old!\n";
+		std::cout << GetName() << " is " << GetAge() << " year(s) old!\n";
 	}
-
-	//create one in main then print
 };

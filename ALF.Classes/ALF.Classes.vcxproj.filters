@@ -18,12 +18,21 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Animal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Student.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Animal.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dog.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cat.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

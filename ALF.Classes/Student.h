@@ -29,7 +29,7 @@ public: // Classes are automatically private
 	// "normal" methods
 	void CalculateGPA() { /*do stuff */ }
 
-	void Print() const
+	void Print2() const
 	{
 		std::cout << m_name << " has a gpa of " << m_gpa << "\n";
 	}
