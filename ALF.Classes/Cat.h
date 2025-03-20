@@ -9,13 +9,26 @@ private:
 
 public:
 
-	 virtual void ClimbTree()
+	Cat() {}
+	Cat(const std::string name, const int age)
+		:Animal(name, age) {}
+
+	// virtual destructor
+	virtual ~Cat() {}
+
+	 virtual void Speak() const
 	{
-		std::cout << GetName() << " is climbing up a tree\n";
+		std::cout << GetName() << " Says Meow\n";
 	}
 
-	void Print() const
+	/*void Print() const
 	{
 		std::cout << GetName() << " Meows.\n";
+	}*/
+
+	virtual void Move() const
+	{
+		std::cout << GetName() << " is pouncing\n";
 	}
 };
+

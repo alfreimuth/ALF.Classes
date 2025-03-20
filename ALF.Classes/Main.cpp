@@ -30,29 +30,36 @@ int main()
 	alex.SetGPA(3.8f);
 	alex.Print2();
 
-	Animal chocolate;
-	chocolate.SetName("Chocolate");
-	chocolate.SetAge(4);
-	chocolate.Print();
+	Cat kitty("Kitty", 4);
+	kitty.Speak();
 
-	Dog bonnie;
+	std::vector<Animal*> animals;
+	animals.push_back(new Cat("Cheeto", 5));
+	animals.push_back(&kitty);
+
+	Dog d;
+	d.SetName("Apollo");
+	d.SetAge(6);
+	animals.push_back(&d);
+
+	for (Animal* pAnimal : animals)
+	{
+		pAnimal->Move();
+		pAnimal->Speak();
+	}
+
+	/*Dog bonnie;
 	bonnie.SetName("Bonnie");
-	bonnie.DigHole();
+	bonnie.Speak();
 
 	Cat cheeto;
 	cheeto.SetName("Cheeto");
-	cheeto.ClimbTree();
+	cheeto.Speak();
 
 	std::vector<Animal*> animals;
 	animals.push_back(&chocolate);
 	animals.push_back(&bonnie);
-	animals.push_back(&cheeto);
-
-	for (const Animal* pAnimal : animals)
-	{
-		pAnimal->Print();
-	}
-
+	animals.push_back(&cheeto);*/
 
 
 	(void)_getch();
